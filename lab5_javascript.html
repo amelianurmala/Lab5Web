@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pemesanan Barang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8bcda;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            width: 400px;
+            margin: auto;
+            background: #ec49a3;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Pemesanan Barang</h1>
+    <form name="formPesan" onsubmit="return validasiPesanan()">
+        <label>Nama Pembeli:</label>
+        <input type="text" id="nama">
+
+        <label>Alamat:</label>
+        <textarea id="alamat" rows="3"></textarea>
+
+        <label>Nomor HP:</label>
+        <input type="text" id="hp">
+
+        <label>Pilih Barang:</label>
+        <select id="barang">
+            <option value="">-- Pilih Barang --</option>
+            <option value="Makeup">Makeup</option>
+            <option value="Skincare">Skincare</option>
+            <option value="Parfum">Parfum</option>
+        </select>
+
+        <input type="submit" value="Kirim Pesanan">
+    </form>
+
+    <script>
+        function validasiPesanan() {
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var hp = document.getElementById("hp").value;
+            var barang = document.getElementById("barang").value;
+
+            if (nama == "") {
+                alert("Nama pembeli wajib diisi!");
+                return false;
+            }
+            if (alamat == "") {
+                alert("Alamat tidak boleh kosong!");
+                return false;
+            }
+            if (hp == "") {
+                alert("Nomor HP wajib diisi!");
+                return false;
+            } else if (isNaN(hp)) {
+                alert("Nomor HP hanya boleh angka!");
+                return false;
+            }
+            if (barang == "") {
+                alert("Pilih barang yang ingin dipesan!");
+                return false;
+            }
+            alert("Pesanan berhasil dikirim!");
+            return true;
+        }
+    </script>
+</body>
+</html>
+
