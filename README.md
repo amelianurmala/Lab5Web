@@ -575,32 +575,44 @@ Tahap ini berfungsi untuk memastikan logika dan struktur form berfungsi sepenuhn
 
 ### Penjelasan
 
-**- Memilih Barang (Gambar 1)**
-Pada tahap pertama, pengguna bernama Amelia Nurmala Dewi mengisi data Nama Pembeli, Alamat, dan memilih jenis barang yaitu Makeup.
-Ketika pengguna memilih barang tersebut, muncul sebuah alert dari JavaScript yang menampilkan pesan:
+#### Memilih Barang (Gambar 1)
+Pada tahap pertama, pengguna bernama **Amelia Nurmala Dewi** mengisi data **Nama Pembeli**, **Alamat**, dan memilih jenis barang yaitu **Makeup**.  
+Ketika pengguna memilih barang tersebut, muncul sebuah **alert** dari JavaScript yang menampilkan pesan:
 
+```
 `Anda memilih Makeup. Harga mulai Rp150.000`
-Pesan ini berasal dari event onchange pada elemen <select> yang digunakan untuk menampilkan harga dasar barang yang dipilih.
+```
 
-**- Menambahkan Pilihan Tambahan (Gambar 2)**
+Pesan ini berasal dari **event `onchange`** pada elemen `<select>` yang digunakan untuk menampilkan harga dasar barang yang dipilih.
+
+---
+
+#### Menambahkan Pilihan Tambahan (Gambar 2)
 Setelah itu, pengguna dapat memilih tambahan layanan seperti:
 
-- Kotak Kado (+Rp20.000)
-- Plastik Premium (+Rp10.000)
-- Pita Hias (+Rp5.000)
+- Kotak Kado (+Rp20.000)  
+- Plastik Premium (+Rp10.000)  
+- Pita Hias (+Rp5.000)  
 
-JavaScript akan menghitung total harga tambahan secara otomatis berdasarkan checkbox yang dicentang.
+JavaScript akan menghitung total harga tambahan secara otomatis berdasarkan checkbox yang dicentang.  
 Pada gambar terlihat bahwa semua tambahan dicentang sehingga total tambahan menjadi:
 
+```
 `Rp20.000 + Rp10.000 + Rp5.000 = Rp35.000`
-Nilai total ini otomatis muncul pada kolom Total Harga Tambahan.
+```
 
-**- Mengirim Pesanan (Gambar 3)**
-Setelah seluruh data terisi, pengguna menekan tombol "Kirim Pesanan".
+Nilai total ini otomatis muncul pada kolom **Total Harga Tambahan**.
+
+---
+
+#### Mengirim Pesanan (Gambar 3)
+Setelah seluruh data terisi, pengguna menekan tombol **"Kirim Pesanan"**.  
 JavaScript kemudian menampilkan alert konfirmasi dengan pesan berikut:
 
+```
 `Pesanan atas nama Amelia Nurmala Dewi berhasil dikirim!
  Total tambahan: Rp35000`
+```
 Pesan ini menandakan bahwa data pesanan telah berhasil diproses (secara simulasi, karena belum terhubung ke backend).
 
 
