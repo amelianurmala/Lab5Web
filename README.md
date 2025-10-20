@@ -368,17 +368,21 @@ Di bawahnya terdapat form pemesanan dengan beberapa field seperti:
 
 ### Penjelasan
 
-Setelah struktur form selesai, saya menambahkan **JavaScript** dengan fungsi `validasiPesanan()`.  
-Tujuannya untuk memeriksa apakah semua kolom sudah diisi dengan benar.
+Pada tahap ini , form masih menggunakan tampilan dasar tanpa warna (default browser style).
+Fokus utama pada tahap ini adalah memastikan fungsi dari setiap elemen form berjalan dengan benar, seperti:
 
-Penjelasan singkat kodenya:
-- Mengecek apakah kolom **Nama Pembeli** kosong.  
-- Mengecek apakah kolom **Alamat** kosong.  
-- Mengecek apakah **Nomor HP** hanya berisi angka (`isNaN`).  
-- Mengecek apakah barang sudah dipilih.  
-Jika ada yang kosong, maka muncul peringatan `alert()` agar pengguna melengkapi datanya.
+- Input Nama Pembeli — untuk menuliskan nama lengkap pengguna.
+- Textarea Alamat — untuk mengisi alamat pengiriman.
+- Input Nomor HP — dengan placeholder contoh format nomor.
+- Dropdown Pilih Barang — untuk memilih produk yang diinginkan.
+- Checkbox Pilihan Tambahan — seperti:
+    - Kotak Kado (+Rp20.000)
+    - Plastik Premium (+Rp10.000)
+    - Pita Hias (+Rp5.000)
+- Kolom Total Harga Tambahan — menampilkan hasil perhitungan otomatis dari checkbox yang dipilih.
+- Tombol Kirim Pesanan dan Reset — untuk mengirim data atau menghapus input.
 
-Tampilan belum berubah secara visual, tapi fungsinya sudah mulai berjalan sesuai perintah validasi di JavaScript.
+Tahap ini berfungsi untuk memastikan logika dan struktur form berfungsi sepenuhnya sebelum ditambahkan desain visual.
 
 ---
 
@@ -571,28 +575,32 @@ Tampilan belum berubah secara visual, tapi fungsinya sudah mulai berjalan sesuai
 
 ### Penjelasan
 
-Pada tahap ini saya menambahkan **kode CSS** untuk mempercantik tampilan form.  
-Saya ubah warna latar belakang menjadi **pink lembut**, memberi efek **bayangan pada form**, dan membuat tombol **Kirim Pesanan** berwarna biru agar menarik perhatian pengguna.
+**- Memilih Barang (Gambar 1)**
+Pada tahap pertama, pengguna bernama Amelia Nurmala Dewi mengisi data Nama Pembeli, Alamat, dan memilih jenis barang yaitu Makeup.
+Ketika pengguna memilih barang tersebut, muncul sebuah alert dari JavaScript yang menampilkan pesan:
 
-Perubahan yang dilakukan:
-- Warna background halaman menjadi `#f5b3c8`.  
-- Warna form menjadi `#cc6787` dengan sudut membulat (`border-radius: 12px`).  
-- Tombol submit diberi efek hover agar lebih interaktif.  
-- Form ditata agar berada di tengah halaman (`margin: auto`).  
+`Anda memilih Makeup. Harga mulai Rp150.000`
+Pesan ini berasal dari event onchange pada elemen <select> yang digunakan untuk menampilkan harga dasar barang yang dipilih.
 
-Hasil akhirnya seperti gambar di atas — form terlihat lebih modern, rapi, dan mudah dibaca.
+**- Menambahkan Pilihan Tambahan (Gambar 2)**
+Setelah itu, pengguna dapat memilih tambahan layanan seperti:
 
----
+- Kotak Kado (+Rp20.000)
+- Plastik Premium (+Rp10.000)
+- Pita Hias (+Rp5.000)
 
-## Kesimpulan 
+JavaScript akan menghitung total harga tambahan secara otomatis berdasarkan checkbox yang dicentang.
+Pada gambar terlihat bahwa semua tambahan dicentang sehingga total tambahan menjadi:
 
-Dari keseluruhan hasil praktikum ini, saya memahami bahwa:
-- **HTML** digunakan untuk membuat struktur form pemesanan barang.  
-- **JavaScript** digunakan untuk memvalidasi data agar tidak ada kolom yang kosong atau salah input.  
-- **CSS** digunakan agar tampilan form terlihat menarik dan profesional.  
+`Rp20.000 + Rp10.000 + Rp5.000 = Rp35.000`
+Nilai total ini otomatis muncul pada kolom Total Harga Tambahan.
 
-Hasil akhirnya menampilkan pop-up alert “Pesanan berhasil dikirim!” sebagai tanda bahwa validasi berjalan dengan baik dan form sudah siap dikirim ke sistem.
+**- Mengirim Pesanan (Gambar 3)**
+Setelah seluruh data terisi, pengguna menekan tombol "Kirim Pesanan".
+JavaScript kemudian menampilkan alert konfirmasi dengan pesan berikut:
 
-
+`Pesanan atas nama Amelia Nurmala Dewi berhasil dikirim!
+ Total tambahan: Rp35000`
+Pesan ini menandakan bahwa data pesanan telah berhasil diproses (secara simulasi, karena belum terhubung ke backend).
 
 
