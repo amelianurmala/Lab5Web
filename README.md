@@ -10,7 +10,7 @@
 
 <img width="665" height="708" alt="Screenshot (838)" src="https://github.com/user-attachments/assets/753f69e6-ca11-46f7-a69d-0807bc6c3a71" />
 
-#### Penjelasan
+### Penjelasan
 
 Pada tahap pertama, saya membuat struktur dasar HTML berisi form sederhana untuk **pemesanan barang**.  
 Form ini berisi kolom:
@@ -28,7 +28,7 @@ Namun fungsinya sudah ada, yaitu menampilkan form input dasar yang nantinya akan
 
 <img width="661" height="706" alt="Screenshot (837)" src="https://github.com/user-attachments/assets/693a1e7d-070a-45f2-80cc-dd569e986760" />
 
-#### Penjelasan
+### Penjelasan
 
 Setelah struktur form selesai, saya menambahkan **JavaScript** dengan fungsi `validasiPesanan()`.  
 Tujuannya untuk memeriksa apakah semua kolom sudah diisi dengan benar.
