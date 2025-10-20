@@ -193,7 +193,7 @@ Di bawahnya terdapat form pemesanan dengan beberapa field seperti:
 
 ---
 
-## 4. Menambahkan JavaScript Validasi Form
+## 4. Form Pemesanan Barang dengan Validasi JavaScript
 
 <img width="665" height="708" alt="Screenshot (855)" src="https://github.com/user-attachments/assets/2dc398b8-8763-4c4e-b727-82697ca9bd05" />
 
@@ -386,7 +386,7 @@ Tahap ini berfungsi untuk memastikan logika dan struktur form berfungsi sepenuhn
 
 ---
 
-## 5. Menambahkan CSS agar Tampilan Menarik
+## 5. Hasil Akhir Form Pemesanan Barang dengan CSS dan JavaScript
 
 <img width="667" height="712" alt="Screenshot (852)" src="https://github.com/user-attachments/assets/b4c39596-24bd-4ed3-8f03-0b40d8d82f8b" />
 
